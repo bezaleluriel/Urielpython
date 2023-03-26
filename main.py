@@ -3,7 +3,6 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -11,6 +10,57 @@ def print_hi(name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+
+
+
+    # is monotonic ascending or descending
+    lst = [8,7,5,9]
+    print(all([lst[i] >= lst[i - 1] for i in range(1, len(lst))]) or all([lst[j] <= lst[j - 1] for j in range(1, len(lst))]))
+
+    input()
+
+    #is prime func
+    number = int(input("enter number: "))
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            print("not primary")
+            break
+    # if the for loop ended without reaching the break
+    else:
+        print("primary number")
+
+    input()
+
+
+
+
+
+    # some tricks on 2 lists
+    l1 = [4,5,6,7]
+    l2 = [6,7,8,9]
+
+    print(set(l1).intersection(l2))
+    print(set(l1).union(l2))
+    print(set(l1).difference(l2))
+    print(set(l1).symmetric_difference(l2))
+    print(set(l1).issubset(l2))
+    print(set(l1).issuperset(l2))
+
+
+
+
+
+    str = 'hello world'
+    # use a dictionary comprehension to count the letter frequencies
+    # in dict comprehension to return key:value the syntax is x : y
+    letter_count = {char : str.count(char) for char in str}
+    # print the letter count dictionary
+    print(letter_count)
+
+
+
+
+
 
     dict1 = {'name': 'uriel', 'age': 31, 'is_student': False}
 
