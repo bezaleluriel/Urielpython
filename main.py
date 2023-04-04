@@ -51,7 +51,7 @@ if __name__ == '__main__':
     else:
         print('primary')
 
-    input()
+
 
     s = 'aa bb,ccc dddd,eee,f ff ff,jjj hh'
     lst_s = list(s.split(','))
