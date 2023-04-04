@@ -7,9 +7,37 @@ def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
+def is_ascending(*args):
+    # one line!!
+    return all([args[i] >= args[i - 1] for i in range(1, len(args))])
+    # multiple line!!!
+    # last = args[0]
+    # is_ascending = True
+    # for i in range(1, len(args)):
+    #     if args[i] >= last:
+    #         last = args[i]
+    #         continue
+    #     else:
+    #         is_ascending = False
+    #         break
+    # return is_ascending
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+
+    lst = [4, 5, 6, 7]
+    ans = is_ascending(lst)
+
+
+
+
+    dict1 = {'a': 1, 'b': 31, 'c': 3}
+    [print(f'{k} = {v}') for k, v in dict1.items()]
+
+
+
+
 
 
 
