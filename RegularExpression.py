@@ -82,6 +82,7 @@ x = re.findall(time_pattern, text)
 print(x)
 # get help on function
 help(re.sub)
+#TODO - NOT PERFECT
 x = re.sub(time_pattern, "##:##:##", text)
 print(x)
 
@@ -89,6 +90,9 @@ text = 'one is 1,   two is 2'
 # in this regular expression split func we remove the space/s and the ',', and new lines and tabs
 ans = re.split('[, \t\n]+', text)
 print(ans)
+
+
+
 
 
 
