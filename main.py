@@ -9,7 +9,7 @@ def print_hi(name):
 
 def is_ascending(*args):
     # one line!!
-    return all([args[i] >= args[i - 1] for i in range(1, len(args))])
+    return  all(lst[i] <= lst[i+1] for i in range(len(lst)-1))
     # multiple line!!!
     # last = args[0]
     # is_ascending = True
@@ -22,13 +22,16 @@ def is_ascending(*args):
     #         break
     # return is_ascending
 
+# ascending or descending
+def is_monotonic(*args):
+   return all([args[i] >= args[i - 1] for i in range(1, len(args))]) or all([args[j] <= args[j - 1] for j in range(1, len(args))])
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    lst = [4, 5, 6, 7]
+    lst = [4, 3, 2, 1]
     ans = is_ascending(lst)
-
+    ans2 = is_monotonic(lst)
 
 
 
