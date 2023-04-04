@@ -44,5 +44,6 @@ my_list = [123, 45, 678]
 # Define a generator comprehension that applies a lambda function to each element in the input list
 # The lambda function converts each element to a string, then iterates over its digits and sums them up
 # The resulting iterator of sums is converted to a list using the list() function
+#inside the sum is () and not [] therefore it is generator compehension
 digit_sum_list = list(map(lambda x: sum(int(d) for d in str(x)), my_list))
 print(digit_sum_list)  # Output: [6, 9, 21]
