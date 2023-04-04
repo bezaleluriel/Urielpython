@@ -3,13 +3,15 @@
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
+import math
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 def is_ascending(*args):
     # one line!!
-    return  all(lst[i] <= lst[i+1] for i in range(len(lst)-1))
+    return all(lst[i] <= lst[i+1] for i in range(len(lst)-1))
     # multiple line!!!
     # last = args[0]
     # is_ascending = True
@@ -26,8 +28,35 @@ def is_ascending(*args):
 def is_monotonic(*args):
    return all([args[i] >= args[i - 1] for i in range(1, len(args))]) or all([args[j] <= args[j - 1] for j in range(1, len(args))])
 
+
+def is_2_so_flip(lst1):
+    #TODO finish with 1 line
+    print([f"{' '.join()}"])
+    # for s in lst1:
+    #     if len(s.split(' ')) == 2:
+    #         bla = reversed(s.split(' '))
+    #         print(' '.join(bla))
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+
+
+    num = 13
+    if num < 2:
+        print('not primary')
+    for i in range(2, int(math.sqrt(num) + 1)):
+        if num % i == 0:
+            print('not primary')
+    # cool feature of python!
+    else:
+        print('primary')
+
+    input()
+
+    s = 'aa bb,ccc dddd,eee,f ff ff,jjj hh'
+    lst_s = list(s.split(','))
+    is_2_so_flip(lst_s)
+
 
     lst = [4, 3, 2, 1]
     ans = is_ascending(lst)
