@@ -1,5 +1,7 @@
 
 #muliples board
+import csv
+import os.path
 import re
 
 # f = open('multiples_board.txt', 'w')
@@ -27,5 +29,28 @@ x = re.findall(time_pattern, f.read())
 f.close()
 g.write('\n'.join(x))
 g.close()
+
+
+#csv
+with open(r'Z:\___advanced python\movies.csv', 'r+', encoding='utf-8') as f:
+    reader = csv.DictReader(f)
+    for i in reader:
+        if i['title'] == 'Black Mirror':
+            print(i['movieId'])
+
+# #csv
+# with open(r'Z:\___advanced python\movies.csv', 'a+', encoding='utf-8', newline='') as f:
+#     writer = csv.DictReader(f,fieldnames=['movieId', 'title', 'geners'])
+#     writer.writerow({'movieId':'99999', 'title':'moti abu', 'geners':'education'})
+
+
+#all txt files from dextop to one file in my project
+desktop = r'C:\Users\MHT\Desktop'
+with open('all_files_from_desktop.txt', 'w') as w_file:
+    for i in os.listdir(desktop):
+        if i.endswith('.txt'):
+            with open(os.path.join(desktop,i)) as f:
+                w_file.write(f.read() + '\n')
+
 
 
