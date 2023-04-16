@@ -58,6 +58,8 @@ def is_valid_email(email):
     # {2, }  # two or more alphabetical characters
     # $  # end of string
     pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    # by intructor of the course..
+    short_pattern = '\w+@\w+.com'
     return re.match(pattern, email) is not None
 
 email = 'example@email.com'
