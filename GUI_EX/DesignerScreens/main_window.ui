@@ -38,7 +38,7 @@ font-size: 40px</string>
     <string>          Welcome</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="login">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -55,7 +55,7 @@ color: rgb(0, 0, 127)</string>
     <string>Log in</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="create_new_account">
    <property name="geometry">
     <rect>
      <x>380</x>
