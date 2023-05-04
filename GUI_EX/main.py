@@ -116,6 +116,7 @@ class FillProfileScreen(QDialog):
         self.photo.setPixmap(pixmap)
 
 
+
 app = QApplication([])
 
 # for one window
