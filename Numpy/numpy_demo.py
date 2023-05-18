@@ -81,3 +81,26 @@ sorted_genre_counts = genre_counts.sort_values('count', ascending=False)
 # Print the top 3 genres
 top_3_genres = sorted_genre_counts.head(3)
 print(top_3_genres)
+
+
+
+
+
+
+# code to print the calculated commission for each car name:
+
+# Read the first CSV file into a DataFrame
+cars1_df = pd.read_csv(r'Z:\___advanced python\CARS1.csv')
+
+# Read the second Excel file into a DataFrame
+cars2_df = pd.read_excel(r'Z:\___advanced python\CARS2.xlsx')
+
+# Merge the two DataFrames on the 'Make' column
+merged_df = pd.merge(cars1_df, cars2_df, on='Make')
+
+# Calculate the commission in USD for each car by multiplying the 'price' and 'commission' columns
+merged_df['usd_commission'] = merged_df['price'] * merged_df['commision']
+
+# Print the 'Make', 'Model', and 'usd_commission' columns of the merged DataFrame
+print(merged_df[['Make', 'Model', 'usd_commission']])
+
